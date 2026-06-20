@@ -1,12 +1,11 @@
 package backend;
-
 /// Representa a un estudiante del Centro de Apoyo Academico.
 /// Se modela como un RECORD: es inmutable por definicion (campos final y sin
 /// setters), siguiendo el principio de inmutabilidad de la programacion funcional.
 /// Sus accesores son nombre(), curso() y nota().
 public record Estudiante(String nombre, String curso, double nota) {
 
-    /// Funcion pura sobre el estudiante: true si la nota es mayor o igual a 4.0.
+    /// Funcion  sobre el estudiante
     public boolean aprobado() {
         return this.nota >= 4.0;
     }

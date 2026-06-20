@@ -1,5 +1,4 @@
 package backend;
-
 /// Resumen de un curso de la base de conocimiento. Es un record (inmutable)
 ///  agrupa el nombre del curso, cuantos estudiantes tiene y su promedio.
 /// Se construye a partir de los datos usando Stream

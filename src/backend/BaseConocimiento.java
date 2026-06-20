@@ -15,7 +15,7 @@ public class BaseConocimiento {
         this.estudiantes = cargarEstudiantes();
     }
 
-    /// Define los 32 estudiantes de la base de conocimiento igual pueden ser ams
+    /// Define los 32 estudiantes de la base de conocimiento.
     private List<Estudiante> cargarEstudiantes() {
         return List.of(
                 new Estudiante("Ana",          "Prolog",          6.5),
@@ -65,14 +65,14 @@ public class BaseConocimiento {
                 .anyMatch(e -> e.curso().equalsIgnoreCase(curso));
     }
 
-    /// Determina con Stream + filter + anyMatch si un estudiante esta aprobado (nota >= 4.0).
+    /// Determina con Stream + filter + anyMatch si un estudiante esta aprobado.
     public boolean estaAprobado(String nombre) {
         return estudiantes.stream()
                 .filter(e -> e.nombre().equalsIgnoreCase(nombre))
                 .anyMatch(e -> e.nota() >= 4.0);
     }
 
-    /// Determina si un estudiante esta reprobado (nota < 4.0).
+    /// Determina si un estudiante esta reprobado.
     public boolean estaReprobado(String nombre) {
         return estudiantes.stream()
                 .filter(e -> e.nombre().equalsIgnoreCase(nombre))

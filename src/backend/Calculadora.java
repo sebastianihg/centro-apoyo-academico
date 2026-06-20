@@ -4,7 +4,7 @@ import java.util.Optional;
 
 /// Calculadora con las operaciones aritmeticas basicas (+, -, *, /).
 /// Las operaciones son funciones puras y la division se maneja de forma
-/// funcional con Optional (en vez de lanzar excepciones), como en el material.
+/// funcional con Optional.
 public final class Calculadora {
 
     // Clase de utilidad, no instanciable.
@@ -20,7 +20,6 @@ public final class Calculadora {
     }
 
     /// Aplica la operacion indicada sobre los dos operandos.
-    /// @return un Optional con el resultado, o vacio
     public static Optional<Double> calcular(double a, double b, String operacion) {
         return switch (operacion) {
             case "+" -> Optional.of(sumar(a, b));

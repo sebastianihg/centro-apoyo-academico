@@ -15,7 +15,7 @@ public class Menu {
     private final Scanner sc;
 
     private static final List<String> CURSOS_VALIDOS = List.of(
-            "Algoritmos", "Base de Datos", "Java", "Prolog", "Python", "Redes"
+            "Algoritmos", "Base de Dato", "Java", "Prolog", "Python", "Redes"
     );
 
     public Menu() {
@@ -23,9 +23,8 @@ public class Menu {
         this.sc   = new Scanner(System.in);
     }
 
-    // ── Menu principal ───────────────────────────────────────────────
-
-    public void iniciar() {
+    // Menu principal
+    public void menu() {
         int opcion;
         do {
             lineaDecorativa();
@@ -57,8 +56,7 @@ public class Menu {
         } while (opcion != 0);
     }
 
-    // ── Opciones ─────────────────────────────────────────────────────
-
+    //Opciones
     public void mostrarCursos() {
         lineaDecorativa();
         System.out.println("  Cursos disponibles:");
@@ -137,8 +135,7 @@ public class Menu {
         );
     }
 
-    // ── Metodos de lectura validada ──────────────────────────────────
-
+    // Metodos de lectura validada
     private int leerOpcion(int min, int max) {
         while (true) {
             String linea = sc.nextLine().trim();
